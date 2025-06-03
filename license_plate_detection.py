@@ -87,7 +87,7 @@ def clean_ocr_text(text):
     return text
 
 # --- Settings ---
-rtsp_url = "rtsp://Ballop:0855807815@192.168.1.122:554/stream1"
+rtsp_url = "rtsp://Ballop:ballopop@172.20.10.2:554/stream1"
 FONT_PATH = 'fonts/KanitBold.ttf'
 font_size = 30
 pil_font = ImageFont.truetype(FONT_PATH, font_size)
@@ -96,6 +96,8 @@ pil_font = ImageFont.truetype(FONT_PATH, font_size)
 model = YOLO("lp_detector.pt")
 
 # --- EasyOCR Reader ---
+reader = easyocr.Reader(['th', 'en'])
+reader = easyocr.Reader(['th', 'en'])
 reader = easyocr.Reader(['th', 'en'])
 
 # --- Video Stream Class ---

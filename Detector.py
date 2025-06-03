@@ -86,13 +86,13 @@ def clean_ocr_text(text):
     return text
 
 # --- Settings ---
-rtsp_url = "rtsp://Ballop:0855807815@192.168.1.122:554/stream1"
+rtsp_url = "rtsp://ballop:ballopop@192.168.1.9:554/stream1"
 FONT_PATH = 'fonts/KanitBold.ttf'
 font_size = 30
 pil_font = ImageFont.truetype(FONT_PATH, font_size)
 
 # --- YOLO Model ---
-model = YOLO("lp_detector.pt")
+model = YOLO("license-plate-finetune-v1l.pt")
 
 # --- EasyOCR Reader ---
 reader = easyocr.Reader(['th', 'en'])
